@@ -1,3 +1,3 @@
 <?php
 namespace app;
-include '../nova/framework/src/bootstrap.php';
+include '../nova/framework/bootstrap.php';
