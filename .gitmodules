@@ -1,3 +1,6 @@
 [submodule "src/nova/framework"]
 	path = src/nova/framework
 	url = https://github.com/NovaPHPOrg/nova-framework
+[submodule "src/nova/plugin/tpl"]
+	path = src/nova/plugin/tpl
+	url = https://github.com/NovaPHPOrg/nova-tpl
