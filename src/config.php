@@ -7,5 +7,5 @@ return [
     'render_engine' => 'nova\framework\render\SmartyRender',//默认使用smarty模板引擎
     'domain'=>[
         '0.0.0.0',//允许访问的域名
-    ]
+    ],
 ];
