@@ -58,14 +58,48 @@ class Main extends Controller
         return Response::asRedirect('https://www.baidu.com');
     }
 
+
+    function sseExample():Response
+    {
+        return Response::asHtml(
+            <<<HTML
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSE Example</title>
+</head>
+<body>
+    <h1>Server-Sent Events Example</h1>
+    <div id="messages"></div>
+    <script>
+        if (typeof(EventSource) !== "undefined") {
+            var source = new EventSource("sse");
+            source.addEventListener("message", function(event) {
+                var data = event.data;
+                var messagesDiv = document.getElementById("messages");
+                messagesDiv.innerHTML += "<p>" + data + "</p>";
+            });
+        } else {
+            document.getElementById("messages").innerHTML = "Sorry, your browser does not support server-sent events...";
+        }
+    </script>
+</body>
+</html>
+
+HTML
+        );
+    }
+
     function sse(): Response
     {
+
         $count = 0;
         return Response::asSse(function ()use (&$count){
             $count++;
             if ($count > 10) {
                 return false;
             }
+            // if no data , return null
             return [
                 "event" => "message",
                 "data" => "Hello Nova".$count,
