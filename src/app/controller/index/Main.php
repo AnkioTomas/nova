@@ -67,7 +67,7 @@ class Main extends Controller
                 return false;
             }
             return [
-                "type" => "message",
+                "event" => "message",
                 "data" => "Hello Nova".$count,
             ];
 
