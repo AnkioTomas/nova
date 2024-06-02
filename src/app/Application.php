@@ -24,9 +24,9 @@ class Application implements iApplication
         // TODO: Implement onRoute() method.
     }
 
-    function onFrameworkStart()
+    function onFrameworkStart(): void
     {
-        // TODO: Implement onFrameworkStart() method.
+       Route::get("/1.js",new RouteObject("index","main","static"));
     }
 
     function onFrameworkEnd()
