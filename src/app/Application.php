@@ -6,6 +6,7 @@ use nova\framework\iApplication;
 use nova\framework\request\Response;
 use nova\framework\request\Route;
 use nova\framework\request\RouteObject;
+use function nova\framework\route;
 
 class Application implements iApplication
 {
@@ -26,7 +27,7 @@ class Application implements iApplication
 
     function onFrameworkStart(): void
     {
-       Route::get("/1.js",new RouteObject("index","main","static"));
+       Route::get("/static/{file}",route("index","main","static"));
     }
 
     function onFrameworkEnd()

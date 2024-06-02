@@ -47,9 +47,9 @@ class Main extends Controller
         return Response::asFile(ROOT_PATH.'/public/index.php','index.php');
     }
 
-    function static(): Response
+    function static($file): Response
     {
-        return Response::asStatic(ROOT_PATH.'/public/index.js');
+        return Response::asStatic(ROOT_PATH.'/public/'.$file);
     }
 
 
