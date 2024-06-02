@@ -95,10 +95,16 @@ HTML
 
         $count = 0;
         return Response::asSse(function ()use (&$count){
-            $count++;
+
             if ($count > 10) {
                 return false;
             }
+
+            // 有50%的概率返回null
+            if (rand(0, 1) == 0) {
+                return null;
+            }
+            $count++;
             // if no data , return null
             return [
                 "event" => "message",
