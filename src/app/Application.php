@@ -27,7 +27,7 @@ class Application implements iApplication
 
     function onFrameworkStart(): void
     {
-       Route::get("/static/{file}",route("index","main","static"));
+       Route::get("/1.js",route("index","main","static"));
     }
 
     function onFrameworkEnd()
