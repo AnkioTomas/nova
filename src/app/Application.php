@@ -6,6 +6,7 @@ use nova\framework\iApplication;
 use nova\framework\request\Response;
 use nova\framework\request\Route;
 use nova\framework\request\RouteObject;
+use nova\plugin\task\Task;
 use function nova\framework\route;
 
 class Application implements iApplication
@@ -30,6 +31,7 @@ class Application implements iApplication
 
     function onFrameworkStart(): void
     {
+        Task::register();
        Route::get("/index/static/{file}",route("index","main","static"));
     }
 
