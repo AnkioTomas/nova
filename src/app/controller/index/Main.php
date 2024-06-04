@@ -49,7 +49,7 @@ class Main extends Controller
 
     function static($file): Response
     {
-        return Response::asStatic(ROOT_PATH.'/public/'.$file);
+        return Response::asStatic(ROOT_PATH.'/app/static/'.$file);
     }
 
 
