@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/nova/framework" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/nova/framework/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/nova/plugin/tpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/nova/plugin/task" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/nova/plugin/cookie" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/nova/plugin/orm" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

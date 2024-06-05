@@ -4,3 +4,15 @@
 [submodule "src/nova/plugin/tpl"]
 	path = src/nova/plugin/tpl
 	url = https://github.com/NovaPHPOrg/nova-tpl
+[submodule "src/nova/plugin/task"]
+	path = src/nova/plugin/task
+	url = https://github.com/NovaPHPOrg/nova-task
+[submodule "src/nova/plugin/cookie-session"]
+	path = src/nova/plugin/cookie-session
+	url = https://github.com/NovaPHPOrg/nova-cookie-session
+[submodule "src/nova/plugin/cookie"]
+	path = src/nova/plugin/cookie
+	url = https://github.com/NovaPHPOrg/nova-cookie-session
+[submodule "src/nova/plugin/orm"]
+	path = src/nova/plugin/orm
+	url = https://github.com/NovaPHPOrg/nova-orm
