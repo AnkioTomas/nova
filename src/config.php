@@ -13,8 +13,8 @@ return [
         'host'=>'localhost',
         'port'=>3306,
         'username'=>'root',
-        'password'=>'',
+        'password'=>'root',
         'db'=>'test',
-        'charset'=>'mb4utf8',
+        'charset'=>'utf8mb4',
     ]
 ];
