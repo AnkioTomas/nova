@@ -16,7 +16,10 @@ class View extends Controller
   {
       parent::__construct($request);
       $this->response =new ViewResponse();
-      $this->response->init("layout",['name'=>'nova','age'=>18],false);
+      if($request->isPjax()){
+          //取消layout
+      }
+      $this->response->init("layout",['name'=>'nova','age'=>18,'pjax'=>$request->isPjax()],false);
   }
 
     /**
@@ -24,7 +27,17 @@ class View extends Controller
      */
     public function index(): Response
     {
-        return $this->response->asTpl('index',true);
+        return $this->response->asTpl('index',false);
+    }
+
+    /**
+     * @throws ViewException
+     */
+    public function hello(): Response
+    {
+        //处理pjax
+        return $this->response->asTpl('hello',false);
+
     }
 
 }
