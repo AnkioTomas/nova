@@ -8,4 +8,13 @@ return [
     'domain'=>[
         '0.0.0.0',//允许访问的域名
     ],
+    'db'=>[
+        'type'=>'mysql',
+        'host'=>'localhost',
+        'port'=>3306,
+        'username'=>'root',
+        'password'=>'',
+        'db'=>'test',
+        'charset'=>'mb4utf8',
+    ]
 ];

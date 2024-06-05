@@ -31,7 +31,9 @@ class Application implements iApplication
 
     function onFrameworkStart(): void
     {
-        Task::register();
+
+       Task::register();
+       Route::get("/{module}/{controller}/{action}.html",route("{module}","{controller}","{action}"));
        Route::get("/index/static/{file}",route("index","main","static"));
     }
 
