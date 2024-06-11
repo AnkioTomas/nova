@@ -13,7 +13,7 @@
         <script src='{$nprogress}'></script>
         <link rel='stylesheet' href='{$nprogress_css}'/>
         <link rel="stylesheet" href="../static/main.css">
-        <script src="../static/translate.js"></script>
+        <script src="../static/translate.min.js"></script>
         <script src="../static/main.js"></script>
     {/if}
     <title>Hello, world!</title>
@@ -32,19 +32,24 @@
     <script>
         Translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认自动识别当前网页显示文字的语种。 可填写如 'english'、'chinese_simplified' 等，具体参见文档下方关于此的说明。
         Translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
-       // translate.selectLanguageTag.show = false;
-        //lang="zh-CN"
-        // translate.changeLanguage('english');
+
         //English,简体中文,繁体中文,日本語,русский,한국어
-       // Translate.selectLanguageTag.languages = 'english,chinese_simplified,chinese_traditional,japanese,russian,korean';
-        Translate.execute();//进行翻译
-        //
+       //  'english,chinese_simplified,chinese_traditional,japanese,russian,korean';
+
         var selectors = ["title", "#container"];
         var pjax = new Pjax({
             cacheBust: false,
             elements: "a", // default is "a[href], form[action]"
             selectors: selectors
         });
+
+        function init() {
+            Translate.execute();//进行翻译
+            nova.onload();
+            nova.onunload = function () {
+                console.log("onunload");
+            }
+        }
 
         // Pjax 开始时执行的函数
         document.addEventListener("pjax:send", function () {
@@ -76,13 +81,9 @@
                 }, 10);
             }
 
-            nova.onload();
-            nova.onunload = function () {
-                console.log("onunload");
-            }
-            Translate.execute();
+           init();
         });
-        nova.onload();
+   init();
     </script>
 {/if}
 </body>

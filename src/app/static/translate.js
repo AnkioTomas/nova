@@ -1702,7 +1702,7 @@ let Translate = {
         //获取当前是什么语种
         //let langs = Translate.language.get(text);
         let textRecognition = Translate.language.recognition(text);
-        langs = textRecognition.languageArray;
+        let langs = textRecognition.languageArray;
         //console.log('langs');
         //console.log(langs);
 
