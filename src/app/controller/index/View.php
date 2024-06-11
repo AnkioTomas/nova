@@ -27,7 +27,7 @@ class View extends Controller
      */
     public function index(): Response
     {
-        return $this->response->asTpl('index',false);
+        return $this->response->asTpl('index',true);
     }
 
     /**
@@ -36,7 +36,7 @@ class View extends Controller
     public function hello(): Response
     {
         //处理pjax
-        return $this->response->asTpl('hello',false);
+        return $this->response->asTpl('hello',true);
 
     }
 

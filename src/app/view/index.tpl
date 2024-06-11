@@ -21,7 +21,7 @@
     <p>正文</p>
     <table class="mdui-table">
         <tr>
-            <th>表头一</th>
+            <th>表头一233</th>
             <th>表头二</th>
         </tr>
         <tr>
