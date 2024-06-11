@@ -6,14 +6,18 @@
 
 
     nova.onload = function () {
-        var snackbar = document.querySelector(".example-closeable");
-        var openButton = snackbar.nextElementSibling;
+        const snackbar = document.querySelector(".example-closeable");
+        const openButton = snackbar.nextElementSibling;
 
-        openButton.addEventListener("click", () => snackbar.open = true);
+        function openSnackbar() {
+            snackbar.open = true;
+        }
+
+        openButton.addEventListener("click", openSnackbar);
         console.log("onload");
         nova.onunload = function () {
             console.log("onunload");
-            openButton.removeEventListener("click", () => snackbar.open = true);
+            openButton.removeEventListener("click", openSnackbar);
         }
     };
 

@@ -9,11 +9,10 @@
         {include file="cdn.tpl"}
         <link rel="stylesheet" href="{$mdui_css}">
         <script src="{$mdui}"></script>
-        <!-- 如果使用了组件的 icon 属性，还需要引入图标的 CSS 文件 -->
         <script src="{$pjax}"></script>
         <script src='{$nprogress}'></script>
         <link rel='stylesheet' href='{$nprogress_css}'/>
-        <link rel="stylesheet" href="../static/pjax.css">
+        <link rel="stylesheet" href="../static/main.css">
         <script src="../static/main.js"></script>
     {/if}
     <title>Hello, world!</title>
@@ -25,7 +24,7 @@
 </a>
 
 <h1>Hello,{$name}</h1>
-<div id="container">
+<div id="container" class="container">
     {include file="$__template_file"}
 </div>
 {if !$__pjax}
@@ -35,6 +34,7 @@
             elements: "a", // default is "a[href], form[action]"
             selectors: selectors
         });
+
         // Pjax 开始时执行的函数
         document.addEventListener("pjax:send", function () {
             NProgress.start();
