@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/nova/framework" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/nova/plugin/cookie" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/nova/plugin/orm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/nova/plugin/task" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/nova/plugin/tpl" vcs="Git" />
   </component>

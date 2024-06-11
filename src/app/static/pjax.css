@@ -1,0 +1,17 @@
+/* 定义进入动画 */
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.fade-enter {
+    opacity: 0;
+}
+
+/* 定义退出动画 */
+.fade-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.fade-leave {
+    opacity: 1;
+}
