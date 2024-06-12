@@ -38,9 +38,9 @@
 
         var selectors = ["title", "#container"];
         var pjax = new Pjax({
-            cacheBust: false,
+          //  cacheBust: false,
             elements: "a", // default is "a[href], form[action]"
-            selectors: selectors
+            selectors: selectors,
         });
 
         function init() {
