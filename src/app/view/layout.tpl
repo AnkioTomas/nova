@@ -23,7 +23,9 @@
 <a href="hello.html" target="_blank">
     <mdui-button class="ignore">hello,tes</mdui-button>
 </a>
-
+<a href="md.html" target="_blank">
+    <mdui-button class="ignore">Markdown</mdui-button>
+</a>
 <h1>Hello,{$name}</h1>
 <div id="container" class="container">
     {include file="$__template_file"}

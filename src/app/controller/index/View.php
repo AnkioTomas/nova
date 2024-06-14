@@ -40,4 +40,9 @@ class View extends Controller
 
     }
 
+    public function md(): Response
+    {
+        return $this->response->asTpl('md',true);
+    }
+
 }
